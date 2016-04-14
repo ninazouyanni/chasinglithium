@@ -1,0 +1,213 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+body{
+  font-family: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container-fluid{
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid > header{
+  height: 700px;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/**** Articles ****/
+
+
+article.container p{
+  font-family: "Droid Serif", serif;
+  max-width: 620px;
+  margin: 10px auto 20px;
+  line-height: 2.1em;
+  font-size:1.1em;
+}
+
+article.container p.lead{
+  font-size: 1.5em;
+  line-height: 2em;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+figcaption{
+  font-size: 0.85em;
+  margin: 5px 0;
+  line-height: 1.5em;
+  font-weight: 400;
+  color:#777;
+  margin-bottom: 50px;
+}
+
+.introductory-description{
+  padding: 100px 0;
+  font-family: "Droid Serif", serif;
+  line-height: 2.2em;
+  font-size: 1.7em;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dropcap{
+  font-size: 3em;
+    float: left;
+    margin: 0 3px 0 0;
+    padding: 0;
+    line-height: 11px;
+}
+
+/**** Headers and Titles ****/
+
+.main-title{
+  text-align: center;
+  color:#ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6em;
+  letter-spacing: 0.1em;
+  padding-top: 28vh;
+  position: relative;
+  z-index: 1000;
+}
+
+.main-title .thin{
+  display: block;
+  font-weight: 100;
+}
+
+.sub-title{
+  text-align: center;
+  color:#ccc;
+  width:70%;
+  margin: 40px auto 0;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1001;
+}
+
+
+/**** Navigation *****/
+
+.nav-holder{
+  min-height: 58px;
+}
+
+nav{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  line-height: 2.5em;
+  background-color:#000000;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2000;
+}
+
+nav a{
+  color: #333;
+  font-weight: 700;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+  letter-spacing: 0.1em;
+}
+
+nav a:hover{
+  text-decoration: none;
+}
+
+nav a.selected{
+  border: 2px solid #333;
+  border-radius: 3px;
+}
+.main-nav-scrolled{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+/***** Footers *****/
+
+.nextchapter {
+  padding: 25px 20px;
+  background-color: #000;
+  color: #ccc;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+.nextchapter a{
+  color:#ccc;
+}
+
+footer{
+  color:#555;
+  background-color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size:0.7em;
+  padding: 25px 0;
+  border-top:1px solid #888;
+}
+
+
+/**** Video covers for headers ****/
+
+video.background-video{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+
+}
+
+@media (min-aspect-ratio: 16/10) { 
+    video.background-video{
+        height:auto;
+        width:100%;
+    }
+}
+
+@media (max-width:900px){
+  .main-title{
+    font-size: 5em;
+  }
+}
+
+@media (max-width:750px){
+  .main-title{
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width:500px){
+  .main-title{
+    font-size: 2.5em;
+  }
+  .sub-title{
+    font-size: 1em;
+  }
+}
