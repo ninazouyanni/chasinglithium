@@ -1,5 +1,4 @@
 jQuery(document).ready(function ($) {
-  "use strict";
   
   var mn = $("nav"),
     mns = "main-nav-scrolled",
@@ -12,4 +11,13 @@ jQuery(document).ready(function ($) {
       mn.removeClass(mns);
     }
   });
+  
+  $(".modal-xlg").each(function(i, e){
+    $(this).append('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+  });
+  
+  $('.modal-xlg').parent().on('hidden.bs.modal', function (e) {
+    $("iframe", this).vimeo("pause");
+  });
+  
 });

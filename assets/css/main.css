@@ -170,6 +170,62 @@ footer{
 }
 
 
+/**** Play Button *****/
+
+header button.btn.btn-default{
+  display:block;
+  margin: 20px auto;
+  background: rgba(0,0,0,0);
+  color:#ffffff;
+  padding: 10px 50px;
+  border:4px solid white;
+  border-radius: 0;
+  font-size: 1.5em;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+button.btn.btn-default:hover{
+  background: #ccc;
+}
+
+
+/**** Modal ****/
+
+/*
+.modal-xlg{
+  width: 98% !important;
+  margin:0;
+  padding:0;
+  position: absolute;
+  top: 0;
+  left:50%;
+  transform: translateX(-50%) !important;
+  z-index: 500;
+  height:0;
+  padding-bottom: 56.25%;
+}
+*/
+
+.modal-xlg{
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.modal-xlg button.close {
+    position: absolute;
+    z-index: 1000;
+    right: 5px;
+    top: calc(50% - 28vw);
+    font-size: 2em;
+    opacity: .8;
+}
+
 /**** Video covers for headers ****/
 
 video.background-video{
