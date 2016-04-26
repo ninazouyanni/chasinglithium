@@ -12,12 +12,27 @@ jQuery(document).ready(function ($) {
     }
   });
   
-  $(".modal-xlg").each(function(i, e){
-    $(this).append('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+  $(".custom-modal").each(function(i, e){
+    $('.inner-custom-modal', this).append('<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
   });
   
-  $('.modal-xlg').parent().on('hidden.bs.modal', function (e) {
-    $("iframe", this).vimeo("pause");
-  });
+
   
+
+  
+  $('button[data-toggle="custom-modal"]').on('click', function (e) {
+    var $modal = $($(this).attr("data-target")).addClass("show");
+    
+    $("iframe", $modal)
+      .vimeo("play")
+      .on("pause", function(){
+        $modal.removeClass("show");
+      });
+    
+    $modal.find(".close").on("click", function(){
+      $("iframe", $modal).vimeo("pause");
+      $modal.removeClass("show");
+    })
+  });
+
 });
