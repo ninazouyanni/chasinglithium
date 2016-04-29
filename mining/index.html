@@ -36,7 +36,7 @@
     </header>
     
     <div class="nav-holder">
-      <nav class="footer-navigation">
+      <nav>
         <a href="/">Intro</a>
         <a href="mining/" class="selected">Mining</a>
         <a href="../manufacturing/">Manufacturing</a>
@@ -52,7 +52,7 @@
           <iframe class="embed-responsive-item" id="trailer" src="https://player.vimeo.com/video/158588188?color=8ABB20&api=1&player_id=asdf" width="100%" height="713" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         
-    </div>
+      </div>
     </div>
   
     
@@ -127,9 +127,26 @@
     <a href="../manufacturing/" class="pull-right">Next: Manufacturing &#10095;</a>
   </div>
   
-  <footer>
-    <p>this project was built by Rachel Hiles and Nina Zou</p>
-  </footer>
+  <nav class="footer-navigation container-fluid text-right">
+      <div class="row">
+        <a id="chapter-button" class="chapter-button pull-left" data-toggle="collapse"  role="button" href="#navCollapse"><span class="glyphicon glyphicon-menu-hamburger"></span> CHAPTERS</a>
+        <a class="home-button pull-right" href="/"><span class="glyphicon glyphicon-home"></span> HOME</a>
+      </div>
+      <div id="navCollapse" class="row collapse">
+        <div class="col-sm-3">
+          <a href="/mining/"><span>Mining</span></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="/manufacturing/"><span>Manufacturing</span></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="/disposal/"><span>Disposal</span></a>
+        </div>
+        <div class="col-sm-3">
+          <a href="/future/"><span>The Future</span></a>
+        </div>
+      </div>
+  </nav>
   
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>

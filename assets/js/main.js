@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   
-  var mn = $("nav"),
+  var mn = $(".nav-holder nav"),
     mns = "main-nav-scrolled",
     hdr = $("nav").offset().top;
 
@@ -25,8 +25,9 @@ jQuery(document).ready(function ($) {
     
     $("iframe", $modal)
       .vimeo("play")
-      .on("pause", function(){
+      .on("finish pause", function(){
         $modal.removeClass("show");
+        $("#navCollapse").collapse("show");
       });
     
     $modal.find(".close").on("click", function(){
@@ -34,5 +35,10 @@ jQuery(document).ready(function ($) {
       $modal.removeClass("show");
     })
   });
+  
+//  $("#chapter-button").on("click", function(e){
+//     e.preventDefault();
+//    $("#navCollapse").slideUp();
+//  });
 
 });

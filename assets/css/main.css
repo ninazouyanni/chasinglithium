@@ -11,6 +11,7 @@
 
 body{
   font-family: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 .container-fluid{
@@ -20,7 +21,7 @@ body{
 
 .container-fluid > header{
   height: 700px;
-  height: 89vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -29,6 +30,9 @@ body{
 
 /**** Articles ****/
 
+article{
+  position: relative;
+}
 
 article.container p{
   font-family: "Droid Serif", serif;
@@ -106,10 +110,11 @@ figcaption{
 /**** Navigation *****/
 
 .nav-holder{
-  min-height: 300px;
+  
 }
 
 nav{
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   font-size: 0.7em;
@@ -147,10 +152,82 @@ nav a.selected{
 }
 
 
+.footer-navigation{
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0;
+}
+
+.footer-navigation .row div a{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding-top:160px;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+  z-index: 20;
+  padding: 160px 0 0;
+  font-size: 1.5em;
+  background-position: center center;
+  background-size: cover;
+}
+
+.footer-navigation a.home-button{
+  color:white;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 20px;
+  display: inline-block;
+  height: 60px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.footer-navigation a.chapter-button{
+  color:white;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 20px;
+  display: inline-block;
+  height: 60px;
+  margin-left: auto;
+  margin-left: 20px;
+}
+
+
+.footer-navigation .row div a span{
+  padding: 8px 0 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  display: block;
+}
+
+.footer-navigation .row div a:hover span{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.footer-navigation .row > div:nth-child(1) a{
+  background-image: url(/assets/img/nav1.jpg);
+}
+.footer-navigation .row > div:nth-child(2) a{
+  background-image: url(/assets/img/lithiummap.jpg);
+}
+
+.footer-navigation .row > div:nth-child(3) a{
+  background-image: url(/assets/img/nav1.jpg);
+}
+.footer-navigation .row > div:nth-child(4) a{
+  background-image: url(/assets/img/lithiummap.jpg);
+}
+
+
 /***** Footers *****/
 
 .nextchapter {
-  padding: 25px 20px;
+  padding: 25px 20px 80px;
   background-color: #000;
   color: #ccc;
   font-size: 1.5em;
