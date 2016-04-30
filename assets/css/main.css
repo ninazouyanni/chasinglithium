@@ -43,10 +43,11 @@ article.container p{
 }
 
 article.container p.lead{
-  font-size: 1.5em;
-  line-height: 2em;
-  padding-bottom: 30px;
-  padding-top: 20px;
+  font-size: 1em;
+  line-height: 1.5em;
+  overflow: hidden;
+  z-index: 1000;
+  position: absolute;
 }
 
 figcaption{
@@ -106,6 +107,12 @@ figcaption{
   z-index: 1001;
 }
 
+#lead{
+    font-family: Raleway, "Helvetica Neue",Helvetica, Arial, sans-serif;
+    color: #ccc;
+    line-height: 1.5em;
+    
+}
 
 /**** Navigation *****/
 
@@ -166,7 +173,7 @@ nav a.selected{
   padding-top:160px;
   text-align: center;
   vertical-align: bottom;
-  color: white;
+  color: #ccc;
   z-index: 20;
   padding: 160px 0 0;
   font-size: 1.5em;
@@ -175,7 +182,7 @@ nav a.selected{
 }
 
 .footer-navigation a.home-button{
-  color:white;
+  color:#ccc;
   font-size: 1.5em;
   font-weight: 800;
   padding: 20px;
@@ -186,7 +193,7 @@ nav a.selected{
 }
 
 .footer-navigation a.chapter-button{
-  color:white;
+  color:#ccc;
   font-size: 1.5em;
   font-weight: 800;
   padding: 20px;
@@ -210,17 +217,17 @@ nav a.selected{
 }
 
 .footer-navigation .row > div:nth-child(1) a{
-  background-image: url(/assets/img/nav1.jpg);
+  background-image: url(/assets/img/nav1-1.jpg);
 }
 .footer-navigation .row > div:nth-child(2) a{
-  background-image: url(/assets/img/lithiummap.jpg);
+  background-image: url(/assets/img/nav2.jpg);
 }
 
 .footer-navigation .row > div:nth-child(3) a{
-  background-image: url(/assets/img/nav1.jpg);
+  background-image: url(/assets/img/nav3-3-3.jpg);
 }
 .footer-navigation .row > div:nth-child(4) a{
-  background-image: url(/assets/img/lithiummap.jpg);
+  background-image: url(/assets/img/nav4.jpg);
 }
 
 
@@ -372,7 +379,6 @@ video.background-video{
           transform: translate(-50%, -50%);
   width: auto;
   height: 100%;
-
 }
 
 @media (min-aspect-ratio: 16/10) { 
@@ -401,4 +407,15 @@ video.background-video{
   .sub-title{
     font-size: 1em;
   }
+}
+
+#fullpage{
+    margin-left: -80px;
+    width:104vw;
+    min-height:auto;
+    overflow: hidden;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    
 }
