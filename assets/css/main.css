@@ -8,10 +8,72 @@
 		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../fonts/Raleway-200/Raleway-200.eot');
+  src: url('../fonts/Raleway-200/Raleway-200.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-200/Raleway-200.woff2') format('woff2'),
+       url('../fonts/Raleway-200/Raleway-200.woff') format('woff'),
+       url('../fonts/Raleway-200/Raleway-200.ttf') format('truetype'),
+       url('../fonts/Raleway-200/Raleway-200.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Raleway-regular/Raleway-regular.eot');
+  src: url('../fonts/Raleway-regular/Raleway-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-regular/Raleway-regular.woff2') format('woff2'),
+       url('../fonts/Raleway-regular/Raleway-regular.woff') format('woff'),
+       url('../fonts/Raleway-regular/Raleway-regular.ttf') format('truetype'),
+       url('../fonts/Raleway-regular/Raleway-regular.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../fonts/Raleway-800/Raleway-800.eot');
+  src: url('../fonts/Raleway-800/Raleway-800.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-800/Raleway-800.woff2') format('woff2'),
+       url('../fonts/Raleway-800/Raleway-800.woff') format('woff'),
+       url('../fonts/Raleway-800/Raleway-800.ttf') format('truetype'),
+       url('../fonts/Raleway-800/Raleway-800.svg#Raleway') format('svg');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Droid-Serif-regular/Droid-Serif-regular.eot');
+  src: url('../fonts/Droid-Serif-regular/Droid-Serif-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Droid-Serif-regular/Droid-Serif-regular.woff2') format('woff2'),
+       url('../fonts/Droid-Serif-regular/Droid-Serif-regular.woff') format('woff'),
+       url('../fonts/Droid-Serif-regular/Droid-Serif-regular.ttf') format('truetype'),
+       url('../fonts/Droid-Serif-regular/Droid-Serif-regular.svg#DroidSerif') format('svg');
+}
+
+@font-face {
+  font-family: 'Droid Serif';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Droid-Serif-700/Droid-Serif-700.eot');
+  src: url('../fonts/Droid-Serif-700/Droid-Serif-700.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Droid-Serif-700/Droid-Serif-700.woff2') format('woff2'),
+       url('../fonts/Droid-Serif-700/Droid-Serif-700.woff') format('woff'),
+       url('../fonts/Droid-Serif-700/Droid-Serif-700.ttf') format('truetype'),
+       url('../fonts/Droid-Serif-700/Droid-Serif-700.svg#DroidSerif') format('svg');
+}
+
+
 
 body{
   font-family: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 .container-fluid{
@@ -26,6 +88,14 @@ body{
   overflow: hidden;
 }
 
+header canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 50;
+}
 
 
 /**** Articles ****/
@@ -239,17 +309,17 @@ nav a.selected{
 }
 
 .footer-navigation .row > div:nth-child(1) a{
-  background-image: url(/assets/img/nav1-1.jpg);
+  background-image: url(../img/nav1-1.jpg);
 }
 .footer-navigation .row > div:nth-child(2) a{
-  background-image: url(/assets/img/nav2.jpg);
+  background-image: url(../img/nav2.jpg);
 }
 
 .footer-navigation .row > div:nth-child(3) a{
-  background-image: url(/assets/img/nav3-3-3.jpg);
+  background-image: url(../img/nav3-3-3.jpg);
 }
 .footer-navigation .row > div:nth-child(4) a{
-  background-image: url(/assets/img/nav4.jpg);
+  background-image: url(../img/nav4.jpg);
 }
 
 
@@ -432,11 +502,29 @@ video.background-video{
 }
 
 .inlinevideo{
- width: 100vw;
+ width: 100%;
  height: auto;
 }
 
+.opener-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #fff;
+  line-height: 1.8em;
+  font-size:1.3em;
+}
 
+@media (max-width:768px){
+  .opener-image .row > div{
+    background-color:rgba(0,0,0,0.6);
+  }
+  .opener-image .row p{
+    padding: 0 20px;
+  }
+}
+
+/*
 #fullpage{
     width:100%;
     min-height:auto;
@@ -445,3 +533,4 @@ video.background-video{
     background-position: center top;
     position: relative;
 }
+*/

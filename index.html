@@ -4,20 +4,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="http://fonts.googleapis.com/css?family=Raleway:200,400,800" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet" type="text/css">
   <title>Chasing Lithium</title>
 
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
     
-/*
     header#front-header{
       background:#000 url("assets/img/world-line-bright.jpg") top center / cover no-repeat;
     } 
     
-*/
     
     #digital-hopping-line{
       position: absolute;
@@ -32,17 +28,19 @@
   <![endif]-->
 </head>
 <body style="background-color:black;">
-  <div class="container-fluid">
+  <div id="large-header" class="container-fluid">
     <header id="front-header">
       <h1 class="main-title">Chasing <span class="thin">Lithium</span></h1>
       <h2 class="sub-title">The Hidden World Behind the 21st Century's Most Valuable Resource</h2>
       <button class="btn btn-default" data-toggle="custom-modal" data-target="#main-video">PLAY</button>
       
+<!--
       <video class="background-video" autoplay muted loop>
         <source src="../assets/videos/stars.mp4" type="video/mp4">
       </video>
+-->
       
-      <canvas id="digital-hopping-line"></canvas>
+      <canvas id="demo-canvas"></canvas>
     </header>
     
 
@@ -89,5 +87,6 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.vimeo.api.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/animated-background.js"></script>
 </body>
 </html>
