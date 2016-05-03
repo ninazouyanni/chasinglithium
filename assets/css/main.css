@@ -32,6 +32,7 @@ body{
 
 article{
   position: relative;
+  margin-top: 30px;
 }
 
 article.container p{
@@ -47,7 +48,6 @@ article.container p.lead{
   line-height: 1.5em;
   overflow: hidden;
   z-index: 1000;
-  position: absolute;
 }
 
 figcaption{
@@ -77,6 +77,26 @@ figcaption{
     line-height: 11px;
 }
 
+.pquote {
+    float: right;
+    width: 380px;
+    font-family: "Droid Serif", serif;
+    color: #8ab200;
+    font-size: 26px;
+    line-height: 0.9em;
+    padding: 10px;
+
+}
+
+blockquote {
+    margin: 0;
+}
+
+.pquote p:first-letter {
+    font-size: 39px;
+    font-weight: bold;
+}
+
 /**** Headers and Titles ****/
 
 .main-title{
@@ -99,7 +119,7 @@ figcaption{
 
 .sub-title{
   text-align: center;
-  color:#ccc;
+  color:#ffffff;
   width:70%;
   margin: 20px auto 0;
   font-size: 1.5em;
@@ -409,13 +429,17 @@ video.background-video{
   }
 }
 
+.inlinevideo{
+ width: 100vw;
+ height: auto;
+}
+
+
 #fullpage{
-    margin-left: -80px;
-    width:104vw;
+    width:100%;
     min-height:auto;
     overflow: hidden;
-    background-size: cover;
     z-index: 0;
-    position: absolute;
-    
+    background-position: center top;
+    position: relative;
 }
