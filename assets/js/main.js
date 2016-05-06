@@ -1,8 +1,21 @@
 jQuery(document).ready(function ($) {
   
+    
+ //if it's mobile    
+ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     if($("video.background-video img").length){
+        $("video.background-video").replaceWith($("video.background-video img")); 
+     }
+ }
+    
+ if($(".nav-holder").length){
   var mn = $(".nav-holder nav"),
     mns = "main-nav-scrolled",
-    hdr = $("nav").offset().top;
+    hdr = $(".nav-holder").offset().top;
+    
+ $(window).on("resize", function(){
+     hdr = $(".nav-holder").offset().top;
+ });
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > hdr) {
@@ -11,6 +24,7 @@ jQuery(document).ready(function ($) {
       mn.removeClass(mns);
     }
   });
+ }
   
   $(".custom-modal").each(function(i, e){
     $('.inner-custom-modal', this).append('<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>');

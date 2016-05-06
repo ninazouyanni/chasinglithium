@@ -143,8 +143,9 @@ figcaption{
   font-size: 3em;
     float: left;
     margin: 0 3px 0 0;
-    padding: 0;
+    padding:0;
     line-height: 11px;
+    font-family: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .pquote {
@@ -312,7 +313,7 @@ nav a.selected{
   background-image: url(../img/nav1-1.jpg);
 }
 .footer-navigation .row > div:nth-child(2) a{
-  background-image: url(../img/nav2.jpg);
+  background-image: url(../img/nav2-1.jpg);
 }
 
 .footer-navigation .row > div:nth-child(3) a{
@@ -329,7 +330,7 @@ nav a.selected{
   padding: 25px 20px 80px;
   background-color: #000;
   color: #ccc;
-  font-size: 1.5em;
+  font-size: 1em;
   letter-spacing: 0.1em;
 }
 .nextchapter a{
@@ -462,7 +463,8 @@ button.btn.btn-default:hover{
 
 /**** Video covers for headers ****/
 
-video.background-video{
+video.background-video,
+img.background-video{
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -474,7 +476,8 @@ video.background-video{
 }
 
 @media (min-aspect-ratio: 16/10) { 
-    video.background-video{
+    video.background-video,
+    img.background-video{
         height:auto;
         width:100%;
     }
@@ -511,16 +514,33 @@ video.background-video{
   background-repeat: no-repeat;
   background-position: center top;
   color: #fff;
-  line-height: 1.8em;
-  font-size:1.3em;
+  line-height: 1.5em;
+  font-size:1.1em;
+}
+.opener-image p{
+max-width: 620px;
 }
 
 @media (max-width:768px){
   .opener-image .row > div{
-    background-color:rgba(0,0,0,0.6);
   }
   .opener-image .row p{
-    padding: 0 20px;
+    padding: 10px 10px;
+    font-size:0.8em;
+    line-height: 1.3em;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width:604px){
+  .opener-image .row > div{
+  }
+  .opener-image .row p{
+    padding: 0 10px;
+    font-size:0.6em;
+    line-height: 1.4em;
+    font-style: oblique;
+    margin-left: 3px;
   }
 }
 
